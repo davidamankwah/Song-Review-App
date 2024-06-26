@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">SongReview Login Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="login()" [formGroup]="credentials">
+    <ion-item class="ion-margin-bottom">
+      <ion-input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        class="custom-input"
+      ></ion-input>
+      <ion-note
+        slot="end"
+        *ngIf="(email.dirty || email.touched) && email.errors"
+        class="error-message"
+      >Email is invalid</ion-note>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        class="custom-input"
+      ></ion-input>
+      <ion-note
+        slot="end"
+        *ngIf="(password.dirty || password.touched) && password.errors"
+        class="error-message"
+      >Password needs to contain a minimum of 6 characters</ion-note>
+    </ion-item>
+
+    <ion-button
+      type="submit"
+      expand="block"
+      color="success"
+      [disabled]="!credentials.valid"
+      class="custom-button"
+    >Log in</ion-button>
+
+    <ion-button
+      type="button"
+      expand="block"
+      color="secondary"
+      [disabled]="!credentials.valid"
+      (click)="register()"
+      class="custom-button"
+    >Register for Account</ion-button>
+
+    <ion-button
+      expand="block"
+      color="tertiary"
+      (click)="sendReset()"
+      [disabled]="email.invalid"
+      class="custom-button"
+    >Reset password</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "SongReview-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

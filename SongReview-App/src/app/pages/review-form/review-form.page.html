@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/song-review" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>review-form</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <form [formGroup]="songForm" (ngSubmit)="addSong()">
+    <ion-item>
+      <ion-label position="stacked">Song</ion-label>
+      <ion-input formControlName="title" type="text" placeholder="Enter song title here..."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Artist</ion-label>
+      <ion-input formControlName="artist" type="text" placeholder="Enter artist name here..."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Review</ion-label>
+      <ion-textarea formControlName="review" placeholder="Enter your review here..."></ion-textarea>
+    </ion-item>
+
+     <ion-item>
+      <ion-label position="stacked">Rating</ion-label>
+      <ion-input formControlName="rating" type="number" placeholder="Enter star rating (0-5)"></ion-input>
+    </ion-item>
+    <ion-button type="submit" color="primary" expand="full">Save</ion-button>
+  </form>
+</ion-content>

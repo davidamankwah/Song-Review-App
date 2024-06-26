@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Log Out</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="ion-text-center">SongReview</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <h2>Welcome to SongReview App</h2>
+    </ion-card-header>
+
+    <ion-card-content class="ion-text-center">
+      <p>Welcome to SongReview App– the ultimate destination for music enthusiasts and critics alike! Immerse yourself in a fun app where music lovers can share their thoughts, insights, and reviews on the latest tunes.</p>
+
+      <h3> 🎵 Discover New Beats</h3>
+      <p>Explore a vast library of songs spanning various genres. From chart-toppers to hidden gems, find the perfect soundtrack for every mood.</p>
+    
+      <!-- Include other sections as needed -->
+    
+      <h3>🏆 Rate and Rank</h3>
+      <p>Contribute to our collective rankings by rating your favorite songs.</p>
+    
+      <p>Witness how your picks resonate with the community and discover which tracks are gaining popularity.</p>
+
+      <h3>✍️ Express Yourself</h3>
+      <p> Share your passion for music by crafting detailed reviews. </p>
+      <p> Whether it's dissecting lyrics, praising instrumentals, or critiquing production, your voice matters in our vibrant community. </p>
+    
+      <h3>📸 Capture the Moment</h3>
+      <p> Enhance your reviews with visuals! Seamlessly integrate album covers, concert snapshots, and personal images to add a visual flair to your musical narratives. </p>
+
+      <h3>🔍 Effortless Navigation</h3>
+      <p>  Our intuitive interface ensures a seamless and enjoyable experience.</p>
+      <p> Easily navigate through your favorite genres, top charts, and personalized recommendations. </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-button routerLink="/song-review">Get Started</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
